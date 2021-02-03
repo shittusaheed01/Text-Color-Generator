@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import { Link } from "react-router-dom";
 
@@ -54,9 +54,7 @@ function TextGen(props) {
             min="1"
           />
           <select
-            onChange={(e) => {
-              return setText(e.target.value), setDisplay([]);
-            }}
+            onChange={(e) => ( setText(e.target.value), setDisplay([]))}
           >
             <option value="Select Type">Select Type</option>
             <option value="WORDS">WORDS</option>

@@ -26,7 +26,7 @@ function ColorGen(props) {
   }
   const handleConv =(e) => {
     e.preventDefault()
-    if(RGBregex(conversion)  == true){
+    if(RGBregex(conversion)  === true){
       let splits = conversion
         .split(/[,()]/)
         .filter((e) => e)
@@ -34,7 +34,7 @@ function ColorGen(props) {
         .map(item => parseInt(item));
       setConvResult(rgbToHex(...splits));
       console.log(splits);
-    }else if(HEXregex(conversion) == true){
+    }else if(HEXregex(conversion) === true){
       // alert(hexToRgb(conversion))
       const result = hexToRgb(conversion);
       const print = `rgb(${result.r},${result.g},${result.b})`
