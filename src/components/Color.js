@@ -5,7 +5,6 @@ import {rgbToHex} from "../Conversion"
 function Color({ rgb , weight , index, hex }) {
   const [modal, setModal] = useState(false)
   const bcg = rgb.join(",")
-  console.log(rgb)
   const hexColor = rgbToHex(...rgb)
   useEffect(() => {
     const timeout= setTimeout(()=>{

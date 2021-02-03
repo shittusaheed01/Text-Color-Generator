@@ -9,7 +9,7 @@ import { rgbToHex, hexToRgb, RGBregex, HEXregex } from "../Conversion";
 function ColorGen(props) {
   const [color, setColor] = useState("")
   const [list, setList] = useState([])
-  const [num, setNum] = useState(0)
+  const [num, setNum] = useState("")
   const [conversion, setConversion] = useState("")
   const [convResult, setConvResult] = useState("")
 
@@ -33,7 +33,6 @@ function ColorGen(props) {
         .filter((num) => num >= 0)
         .map(item => parseInt(item));
       setConvResult(rgbToHex(...splits));
-      console.log(splits);
     }else if(HEXregex(conversion) === true){
       // alert(hexToRgb(conversion))
       const result = hexToRgb(conversion);
