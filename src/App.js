@@ -8,6 +8,8 @@ import TextGen from "./components/TextGen"
 import ColorGen from "./components/ColorGen"
 import Error from "./components/ErrorPage"
 
+
+
 function App() {
   return (
     <Router>

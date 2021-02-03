@@ -1,6 +1,6 @@
 /* Home Page */
 
-.home{
+.home {
   /* background-color: aqua;
   background: linear-gradient(rgba(20,100,80,0.7), rgba(100,70,40,0.7)), url('https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   background-size: cover;
@@ -12,48 +12,49 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.app-title{
+.app-title {
   font-size: 2rem;
   padding: 10px;
   position: relative;
   /* border: 1px solid white; */
   text-align: center;
 }
-.app-title:after{
-  padding:0;
-  margin:0;
-  display:block;
+.app-title:after {
+  padding: 0;
+  margin: 0;
+  display: block;
   content: "";
-  width:30%;
-  height:3px;
+  width: 30%;
+  height: 3px;
   border-radius: 50%;
-  background-color:#E4572E;
+  background-color: #e4572e;
   position: absolute;
-  right:35%;
-  bottom:-1px;
+  right: 35%;
+  bottom: -1px;
 }
-.app-title:before{
-    padding:0;
-  margin:0;
-  display:block;
+.app-title:before {
+  padding: 0;
+  margin: 0;
+  display: block;
   content: "";
-  width:30%;
-  height:3px;
+  width: 30%;
+  height: 3px;
   border-radius: 50%;
-  background-color:#E4572E;
+  background-color: #e4572e;
   position: absolute;
-  right:35%;
-  top:-1px;
+  right: 35%;
+  top: -1px;
 }
-.generator-div-con{
+.generator-div-con {
   display: flex;
   /* border: 1px solid white; */
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
 }
-.generator-div{
+.generator-div {
   margin: 5px;
   padding: 10px;
   display: flex;
@@ -62,74 +63,75 @@
   flex-direction: column;
   text-align: center;
 }
-.generator-div p{
+.generator-div p {
   font-size: 1.3rem;
 }
-span{
-  color: #008DD5;
+span {
+  color: #008dd5;
 }
-.generator-div button{
+.generator-div button {
   padding: 5px;
   font-size: 1rem;
-  color: #008DD5;
+  color: #008dd5;
   background-color: transparent;
   outline: none;
-  border: 2px solid #008DD5;
+  border: 2px solid #008dd5;
   border-radius: 10px;
   transition: all ease-in-out 0.6s;
 }
-.generator-div button:hover{
+.generator-div button:hover {
   border-color: #eee;
   color: #eee;
   cursor: pointer;
 }
 
-
 /* Text Gen */
-.textgen-con{
+.textgen-con {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  max-width: 650px;
   margin: auto;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
-.textgen-title{
+.textgen-title {
   font-size: 1.5rem;
   font-weight: 800;
   margin: 10px;
   padding: 0px;
   position: relative;
   /* border: 1px solid red; */
+  max-width: 600px;
 }
-.textgen-title:after{
-  padding:0;
-  margin:0;
-  display:block;
+.textgen-title:after {
+  padding: 0;
+  margin: 0;
+  display: block;
   content: "";
-  width:30%;
-  height:3px;
+  width: 30%;
+  height: 3px;
   border-radius: 50%;
-  background-color:#E4572E;
+  background-color: #e4572e;
   position: absolute;
-  right:35%;
-  bottom:-1px;
+  right: 35%;
+  bottom: -1px;
 }
-.textgen-title:before{
-    padding:0;
-  margin:0;
-  display:block;
+.textgen-title:before {
+  padding: 0;
+  margin: 0;
+  display: block;
   content: "";
-  width:30%;
-  height:3px;
+  width: 30%;
+  height: 3px;
   border-radius: 50%;
-  background-color:#E4572E;
+  background-color: #e4572e;
   position: absolute;
-  right:35%;
-  top:-1px;
+  right: 35%;
+  top: -1px;
 }
 .textgen-con form {
   margin-top: 20px;
@@ -140,9 +142,10 @@ span{
   justify-content: center;
   flex-direction: column;
   padding: 10px;
+  max-width: 600px;
 }
 .textgen-con form input,
-.textgen-con form select{
+.textgen-con form select {
   /* width: 50px; */
   font-size: 1rem;
   padding: 5px;
@@ -155,61 +158,257 @@ span{
   margin: 3px;
   display: inline-block;
 }
-.textgen-con form input{
+.textgen-con form input {
   width: 20%;
 }
-.textgen-con form select{
+.textgen-con form select {
   /* width: 80%; */
 }
 .textgen-con form input:active,
 .textgen-con form input:focus,
 .textgen-con form select:active,
-.textgen-con form select:focus{
-  border: 1px solid #008DD5;
+.textgen-con form select:focus {
+  border: 1px solid #008dd5;
 }
-.generated-text-div{
+.generated-text-div {
   margin-top: 10px;
-  padding: 5px;
+  /* padding: 5px; */
   color: #fff;
   overflow: auto;
-  max-height: 350px;
-  background-color: rgba(255,255,255,0.2);
+  max-height: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
 }
-.textgen-con form button{
+.generated-text-div p {
+  margin: 0;
+  padding: 5px;
+}
+.textgen-con form button {
   padding: 5px;
   font-size: 1rem;
-  color: #008DD5;
+  color: #008dd5;
   background-color: transparent;
   outline: none;
-  border: 2px solid #008DD5;
+  border: 2px solid #008dd5;
   border-radius: 10px;
   transition: all ease-in-out 0.6s;
   margin-top: 10px;
 }
-.textgen-con form button:hover{
+.textgen-con form button:hover {
   border-color: #eee;
   color: #eee;
   cursor: pointer;
 }
-.nav{
+.nav {
   position: absolute;
   top: 10px;
   right: 0;
 }
-.nav button{
+.nav button {
   padding: 5px;
   font-size: 1rem;
-  color: #008DD5;
+  color: #008dd5;
   background-color: transparent;
   outline: none;
-  border: 2px solid #008DD5;
+  border: 2px solid #008dd5;
   border-radius: 10px;
   transition: all ease-in-out 0.6s;
   margin: 10px 3px 0 3px;
 }
-.nav button:hover{
+.nav button:hover {
   border-color: #eee;
   color: #eee;
   cursor: pointer;
+}
+.textgen-copy{
+  align-self: center;
+  justify-self: center;
+
+  padding: 5px;
+  font-size: 1rem;
+  color: #008dd5;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #008dd5;
+  border-radius: 10px;
+  transition: all ease-in-out 0.6s;
+  margin: 10px 3px 0 3px;
+}
+.textgen-copy:hover,
+.textgen-copy:focus{
+  border-color: #eee;
+  color: #eee;
+  cursor: pointer;
+}
+/* Color Gen Div */
+.colorgen-con {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  /* justify-content: center; */
+  margin: auto;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.colorgen-forms {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0px auto;
+  align-items: center;
+  /* justify-content: center; */
+}
+.colorgen-form-1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.colorgen-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 10px;
+  margin-top: 60px;
+  padding: 5px;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.colorgen-title:after {
+  padding: 0;
+  margin: 0;
+  display: block;
+  content: "";
+  width: 30%;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #e4572e;
+  position: absolute;
+  right: 35%;
+  bottom: -1px;
+}
+.colorgen-title:before {
+  padding: 0;
+  margin: 0;
+  display: block;
+  content: "";
+  width: 30%;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #e4572e;
+  position: absolute;
+  right: 35%;
+  top: -1px;
+}
+.colorgen-form-1 form {
+  /* margin-top: 20px; */
+  /* border: 1px solid gray; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+.colorgen-forms form input {
+  font-size: 1rem;
+  padding: 0.4em;
+  background: transparent;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 0px 9px 0 9px;
+
+  color: #ccc;
+  margin: 3px;
+  display: inline-block;
+}
+.colorgen-forms form input:active,
+.colorgen-forms form input:focus {
+  border: 1px solid #008dd5;
+}
+
+.colorgen-form-1 form input[type="number"] {
+  width: 60px;
+}
+.colorgen-forms form button {
+  padding: 5px;
+  font-size: 1rem;
+  color: #008dd5;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #008dd5;
+  border-radius: 10px;
+  transition: all ease-in-out 0.6s;
+  flex-wrap: wrap;
+}
+.colorgen-forms form button:hover,
+.colorgen-forms form button:focus {
+  border-color: #eee;
+  color: #eee;
+  cursor: pointer;
+}
+.generated-color-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 15px auto 0;  
+}
+.generated-color {
+  background-color: red;
+  padding: 0.3em;
+  font-size: 0.8rem;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+}
+.modal {
+  align-self: center;
+}
+.generated-color-div .light {
+  color: black;
+}
+.conver-div{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  align-items: center;
+}
+.conver-div span{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  opacity: 0;
+}
+.conv-result{
+  background-color: rgba(0,0,0.9);
+  font-size: 0.7rem;
+  max-width: 90px;
+  text-align: center;
+  display: block;
+  position: relative;
+}
+.color-result{
+  padding: 4px;
+}
+.conv-result:hover .color-copy{
+  cursor: pointer;
+  opacity: 1;
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Link } from "react-router-dom";
 
@@ -31,6 +31,8 @@ function TextGen(props) {
       }
     }
   }
+
+
   return (
     <section className="textgen-con">
       <div className="textgen-title">
@@ -51,7 +53,11 @@ function TextGen(props) {
             max="80"
             min="1"
           />
-          <select onChange={(e) => setText(e.target.value)}>
+          <select
+            onChange={(e) => {
+              return setText(e.target.value), setDisplay([]);
+            }}
+          >
             <option value="Select Type">Select Type</option>
             <option value="WORDS">WORDS</option>
             <option value="PARAGRAPHS">PARAGRAPHS</option>
@@ -60,12 +66,35 @@ function TextGen(props) {
         <button className="textgen-btn">Generate</button>
       </form>
       <div className="generated-text-div">
-        {text === "WORDS" ? (
-          <p>{display}</p>
+        {text === "WORDS" && display.length !== 0 ? (
+          <>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(display);
+              }}
+              className="textgen-copy"
+            >
+              Copy
+            </button>
+            <p>{display}</p>
+          </>
+        ) : text === "PARAGRAPHS" && display.length !== 0 ? (
+          <>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(display);
+              }}
+              className="textgen-copy"
+            >
+              Copy
+            </button>
+            {display.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </>
         ) : (
-          display.map((item, index) => <p key={index}>{item}</p>)
+          " "
         )}
-
       </div>
       <div className="nav">
         <Link to="/">
