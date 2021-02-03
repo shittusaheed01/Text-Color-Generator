@@ -1,38 +1,215 @@
-.App {
+/* Home Page */
+
+.home{
+  /* background-color: aqua;
+  background: linear-gradient(rgba(20,100,80,0.7), rgba(100,70,40,0.7)), url('https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.app-title{
+  font-size: 2rem;
+  padding: 10px;
+  position: relative;
+  /* border: 1px solid white; */
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title:after{
+  padding:0;
+  margin:0;
+  display:block;
+  content: "";
+  width:30%;
+  height:3px;
+  border-radius: 50%;
+  background-color:#E4572E;
+  position: absolute;
+  right:35%;
+  bottom:-1px;
+}
+.app-title:before{
+    padding:0;
+  margin:0;
+  display:block;
+  content: "";
+  width:30%;
+  height:3px;
+  border-radius: 50%;
+  background-color:#E4572E;
+  position: absolute;
+  right:35%;
+  top:-1px;
+}
+.generator-div-con{
+  display: flex;
+  /* border: 1px solid white; */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.generator-div{
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.generator-div p{
+  font-size: 1.3rem;
+}
+span{
+  color: #008DD5;
+}
+.generator-div button{
+  padding: 5px;
+  font-size: 1rem;
+  color: #008DD5;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #008DD5;
+  border-radius: 10px;
+  transition: all ease-in-out 0.6s;
+}
+.generator-div button:hover{
+  border-color: #eee;
+  color: #eee;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
+/* Text Gen */
+.textgen-con{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 90%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 650px;
+  margin: auto;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.textgen-title{
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 10px;
+  padding: 0px;
+  position: relative;
+  /* border: 1px solid red; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textgen-title:after{
+  padding:0;
+  margin:0;
+  display:block;
+  content: "";
+  width:30%;
+  height:3px;
+  border-radius: 50%;
+  background-color:#E4572E;
+  position: absolute;
+  right:35%;
+  bottom:-1px;
+}
+.textgen-title:before{
+    padding:0;
+  margin:0;
+  display:block;
+  content: "";
+  width:30%;
+  height:3px;
+  border-radius: 50%;
+  background-color:#E4572E;
+  position: absolute;
+  right:35%;
+  top:-1px;
+}
+.textgen-con form {
+  margin-top: 20px;
+  /* border: 1px solid gray; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.textgen-con form input,
+.textgen-con form select{
+  /* width: 50px; */
+  font-size: 1rem;
+  padding: 5px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  color: #ccc;
+  margin: 3px;
+  display: inline-block;
+}
+.textgen-con form input{
+  width: 20%;
+}
+.textgen-con form select{
+  /* width: 80%; */
+}
+.textgen-con form input:active,
+.textgen-con form input:focus,
+.textgen-con form select:active,
+.textgen-con form select:focus{
+  border: 1px solid #008DD5;
+}
+.generated-text-div{
+  margin-top: 10px;
+  padding: 5px;
+  color: #fff;
+  overflow: auto;
+  max-height: 350px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+.textgen-con form button{
+  padding: 5px;
+  font-size: 1rem;
+  color: #008DD5;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #008DD5;
+  border-radius: 10px;
+  transition: all ease-in-out 0.6s;
+  margin-top: 10px;
+}
+.textgen-con form button:hover{
+  border-color: #eee;
+  color: #eee;
+  cursor: pointer;
+}
+.nav{
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.nav button{
+  padding: 5px;
+  font-size: 1rem;
+  color: #008DD5;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #008DD5;
+  border-radius: 10px;
+  transition: all ease-in-out 0.6s;
+  margin: 10px 3px 0 3px;
+}
+.nav button:hover{
+  border-color: #eee;
+  color: #eee;
+  cursor: pointer;
 }
